@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+/* ============================================================
+   GROOM'S HAND — Custom CSS Properties
+   Art Direction: Equestrian / Professional / Warm & Earthy
+   ============================================================ */
+
+@theme {
+  --font-display: 'Cabinet Grotesk', 'Helvetica Neue', sans-serif;
+  --font-body: 'Satoshi', 'Inter', sans-serif;
+}
+
+:root {
+  --color-bg: #faf9f6;
+  --color-surface: #ffffff;
+  --color-surface-2: #f5f3ef;
+  --color-surface-offset: #f0ede7;
+  --color-divider: #e5e1da;
+  --color-border: #d4d0c8;
+  --color-text: #1a1812;
+  --color-text-muted: #6b6660;
+  --color-text-faint: #a09a92;
+  --color-text-inverse: #faf9f6;
+  --color-primary: #c05d10;
+  --color-primary-hover: #a64e0d;
+  --color-primary-active: #8b410b;
+  --color-primary-light: #fef3e8;
+  --color-accent: #1a5f7a;
+  --color-accent-hover: #144d63;
+  --color-accent-light: #e8f4f8;
+  --color-success: #2d7a3a;
+}
+
+.dark {
+  --color-bg: #141210;
+  --color-surface: #1c1a17;
+  --color-surface-2: #242220;
+  --color-surface-offset: #1e1c19;
+  --color-divider: #2e2c28;
+  --color-border: #3a3835;
+  --color-text: #e8e4dd;
+  --color-text-muted: #908b84;
+  --color-text-faint: #5a5650;
+  --color-text-inverse: #1a1812;
+  --color-primary: #e88033;
+  --color-primary-hover: #f09540;
+  --color-primary-active: #d06e28;
+  --color-primary-light: #2a1f14;
+  --color-accent: #4fa8c8;
+  --color-accent-hover: #6bbdd8;
+  --color-accent-light: #162028;
+  --color-success: #5daa68;
+}
+
+/* Base resets — layered so Tailwind utilities can override */
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+
+  body {
+    min-height: 100dvh;
+    line-height: 1.6;
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+  }
+
+  h1, h2, h3, h4, h5, h6 { text-wrap: balance; line-height: 1.15; }
+  p, li, figcaption { text-wrap: pretty; }
+
+  ::selection {
+    background: rgba(192, 93, 16, 0.2);
+    color: var(--color-text);
+  }
+}
+
+/* Scroll animations — in components layer */
+@layer components {
+  .fade-in-view {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .fade-in-view.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

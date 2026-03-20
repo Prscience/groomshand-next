@@ -93,16 +93,6 @@ export default function Header() {
             )}
           </button>
 
-          <a
-            href="https://groomshand.com/shop"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="whitespace-nowrap rounded-lg px-4 py-2 text-xs font-semibold tracking-wide text-white transition-all hover:-translate-y-0.5 hover:shadow-md md:px-6 md:py-3 md:text-sm"
-            style={{ background: "var(--color-primary)" }}
-          >
-            Buy Now
-          </a>
-
           {/* Mobile toggle */}
           <button
             className="flex flex-col gap-[5px] md:hidden"

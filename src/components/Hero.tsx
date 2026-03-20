@@ -68,7 +68,7 @@ export default function Hero() {
                 borderColor: "var(--color-primary)",
               }}
             >
-              Find Retailers
+              Find International Distributors
             </button>
           </div>
 

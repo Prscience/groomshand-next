@@ -8,7 +8,7 @@ export default function Hero() {
       className="relative overflow-hidden"
       style={{
         background:
-          "linear-gradient(135deg, var(--color-surface-2) 0%, var(--color-bg) 100%)",
+          "linear-gradient(135deg, var(--color-surface-offset) 0%, var(--color-surface-2) 50%, var(--color-bg) 100%)",
       }}
     >
       <div className="mx-auto grid min-h-[85vh] max-w-[1200px] items-center gap-8 px-6 py-16 md:grid-cols-2 md:py-0">
